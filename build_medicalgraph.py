@@ -9,7 +9,7 @@ import json
 from py2neo import Graph,Node
 
 class MedicalGraph:
-    def __init__(self,host="127.0.0.1",ip=7484,user="",password=""):
+    def __init__(self,host="127.0.0.1",ip=7474,user="",password=""):
         cur_dir = '/'.join(os.path.abspath(__file__).split('/')[:-1])
         self.data_path = os.path.join(cur_dir, 'data/medical.json')
         self.g = Graph(
@@ -264,8 +264,8 @@ class MedicalGraph:
 
 
 if __name__ == '__main__':
-    # handler = MedicalGraph(user='neo4j',password='neo4j')
-    handler = MedicalGraph(user='patrick', password='patrick')
+    handler = MedicalGraph(user='neo4j',password='neo4j')
+    # handler = MedicalGraph(user='patrick', password='patrick')
     print("step1:导入图谱节点中")
     handler.create_graphnodes()
 
