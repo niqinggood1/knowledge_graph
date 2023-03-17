@@ -264,7 +264,8 @@ class MedicalGraph:
 
 
 if __name__ == '__main__':
-    handler = MedicalGraph(user='patrick',password='patrick')
+    # handler = MedicalGraph(user='neo4j',password='neo4j')
+    handler = MedicalGraph(user='patrick', password='patrick')
     print("step1:导入图谱节点中")
     handler.create_graphnodes()
 
